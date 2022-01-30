@@ -117,7 +117,7 @@ function setSearchTopics(clickedExplainer) {
 
 	for (let topic in countryInterest[chartName]) {
     let searchTopicElement = $( "<li/>", {
-        "id": "term-" + topic,
+        "id": "term-" + topic.replace(/\s+/g, '-'),
         "data-term": topic,
         "class": "search-term",
         "text": topic

@@ -65,7 +65,7 @@ function drawAnalysis(clickedTopicLink) {
       .domain([0, d3.max(data)])
       .range([boundedheight, 0]);
 
-		let sparklineId = chart + "-" + term.replace(/\s+/g, '-') + "-" + country.replace(/\s+/g, '-').toLowerCase();
+		let sparklineId = chartName + "-" + term.replace(/\s+/g, '-') + "-" + country.replace(/\s+/g, '-').toLowerCase();
 		let countrySparkline = $( "<div/>", {
 	    "class": "country-sparkline",
       "id": sparklineId

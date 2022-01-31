@@ -20,7 +20,6 @@ function highlightClickedTopicLink(clickedTopicLink) {
   thisItem.closest(".analysis").find(".highlighted-term").html(term);
 }
 
-
 function drawAnalysis(clickedTopicLink) {
   let term = $(clickedTopicLink).data("term");
   let chartName = $(clickedTopicLink).closest(".artwork").data("name");
@@ -32,6 +31,10 @@ function drawAnalysis(clickedTopicLink) {
   $(clickedTopicLink).closest(".analysis").find(".current-topic").text(term);
   $(clickedTopicLink).closest(".analysis").find(".current-topic").removeClass(["highlighted-yellow", "highlighted-orange", "highlighted-green", "highlighted-blue"]);
   $(clickedTopicLink).closest(".analysis").find(".current-topic").addClass("highlighted-" + accentColor);
+
+  // Replace time of day in text
+  let timeOfDay = $(clickedTopicLink).closest(".time-of-day-container").data("time-of-day");
+  $(clickedTopicLink).closest(".analysis").find(".analysis-text-time-of-day").text(timeOfDay);
 
   // Draw sparklines
   let chartDataContainer = $(clickedTopicLink).closest(".analysis").find(".chart-data-container");
@@ -100,7 +103,6 @@ function drawAnalysis(clickedTopicLink) {
   
   // move time range label
 
-  let timeOfDay = $(clickedTopicLink).closest(".time-of-day-container").data("time-of-day");
   $(clickedTopicLink).closest(".analysis").find(".time-range-label").removeClass(["night", "morning", "afternoon", "evening"]);
 	$(clickedTopicLink).closest(".analysis").find(".time-range-label").addClass(timeOfDay);
 

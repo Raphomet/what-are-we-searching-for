@@ -133,7 +133,7 @@ function setSearchTopics(clickedExplainer) {
 	});
 }
 
-$(".explain-the-joke").click(function() {
+$(".explain-link").click(function() {
 	setSearchTopics(this);
   $(this).closest(".artwork").find(".search-term").first().click();
 });

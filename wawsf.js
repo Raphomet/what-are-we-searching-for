@@ -108,6 +108,7 @@ function drawAnalysis(clickedTopicLink) {
 		let timeRangeVerticalLines = $( "<div/>", {
 	    "class": "time-range-vertical-lines"
 		});
+    timeRangeVerticalLines.addClass(timeOfDay);
     chartDataDiv.append(timeRangeVerticalLines);
 
     chartDataContainer.append(chartDataDiv);

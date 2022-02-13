@@ -77,6 +77,32 @@ function drawAnalysis(clickedTopicLink) {
       "id": sparklineId
 		});
     chartDataDiv.append(countrySparkline);
+
+    // add sparkline y-axis labels
+		let sparklineYLabels = $( "<div/>", {
+	    "class": "sparkline-y-labels"
+		});
+		let sparklineYTopLabel = $( "<div/>", {
+	    "class": "sparkline-y-top-label"
+		});
+		let sparklineYTopLabelText = $( "<div/>", {
+	    "class": "sparkline-y-label-text",
+      "text": "High -"
+		});
+		let sparklineYBottomLabel = $( "<div/>", {
+	    "class": "sparkline-y-bottom-label"
+		});
+		let sparklineYBottomLabelText = $( "<div/>", {
+	    "class": "sparkline-y-label-text",
+      "text": "Low -"
+		});
+
+    sparklineYLabels.append(sparklineYTopLabel);
+    sparklineYLabels.append(sparklineYBottomLabel);
+    sparklineYTopLabel.append(sparklineYTopLabelText);
+    sparklineYBottomLabel.append(sparklineYBottomLabelText);
+
+    chartDataDiv.append(sparklineYLabels);
     chartDataContainer.append(chartDataDiv);
     
     const svg = d3

@@ -87,14 +87,14 @@ function drawAnalysis(clickedTopicLink) {
 		});
 		let sparklineYTopLabelText = $( "<div/>", {
 	    "class": "sparkline-y-label-text",
-      "text": "High -"
+      "text": "High"
 		});
 		let sparklineYBottomLabel = $( "<div/>", {
 	    "class": "sparkline-y-bottom-label"
 		});
 		let sparklineYBottomLabelText = $( "<div/>", {
 	    "class": "sparkline-y-label-text",
-      "text": "Low -"
+      "text": "Low"
 		});
 
     sparklineYLabels.append(sparklineYTopLabel);

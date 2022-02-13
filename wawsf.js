@@ -101,8 +101,15 @@ function drawAnalysis(clickedTopicLink) {
     sparklineYLabels.append(sparklineYBottomLabel);
     sparklineYTopLabel.append(sparklineYTopLabelText);
     sparklineYBottomLabel.append(sparklineYBottomLabelText);
-
     chartDataDiv.append(sparklineYLabels);
+
+    // add vertical lines
+
+		let timeRangeVerticalLines = $( "<div/>", {
+	    "class": "time-range-vertical-lines"
+		});
+    chartDataDiv.append(timeRangeVerticalLines);
+
     chartDataContainer.append(chartDataDiv);
     
     const svg = d3

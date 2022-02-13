@@ -139,8 +139,6 @@ function drawAnalysis(clickedTopicLink) {
   $(clickedTopicLink).closest(".analysis").find(".time-range-label").removeClass(["night", "morning", "afternoon", "evening"]);
 	$(clickedTopicLink).closest(".analysis").find(".time-range-label").addClass(timeOfDay);
 
-	$(clickedTopicLink).closest(".analysis").find(".time-range-vertical-lines").removeClass(["height-4", "height-5"]);
-	$(clickedTopicLink).closest(".analysis").find(".time-range-vertical-lines").addClass("height-" + Object.keys(countries).length);
 	$(clickedTopicLink).closest(".analysis").find(".time-of-day-label").text(timeOfDay);  
 }
 
